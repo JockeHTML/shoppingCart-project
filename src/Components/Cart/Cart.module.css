@@ -1,0 +1,31 @@
+.wrapper {
+  width: 80%;
+  margin: auto;
+  padding: 0rem 0rem 2rem 0;
+}
+
+.shoe {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 2px 8px 20px #ddd !important;
+  margin: 1rem 1rem !important;
+  min-width: 350px !important;
+  min-height: 290px !important;
+}
+
+.imageDiv {
+  max-width: 40%;
+}
+
+.imageDiv img {
+  background-position: center;
+  background-size: cover;
+  max-height: 300px;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.emptyCartHeading {
+  text-align: center;
+}

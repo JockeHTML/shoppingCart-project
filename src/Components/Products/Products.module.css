@@ -1,0 +1,61 @@
+.grid {
+  box-shadow: 2px 8px 20px #ddd !important;
+  margin: 1rem 1rem !important;
+  min-width: 350px !important;
+  min-height: 400px !important;
+}
+
+.imageDiv img {
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+  max-height: 320px;
+  min-width: 100%;
+  margin: 0;
+}
+
+.cardInfo h2,
+h3,
+p {
+  padding: 0;
+  margin: 8px 0;
+}
+
+.cardInfo h3 {
+  color: red;
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+  padding: 0rem 0rem 2rem 0;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  background-color: var(--dark);
+  min-width: 300px;
+  padding: 8px;
+}
+
+.button button {
+  outline: none;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  background-color: transparent;
+  color: var(--light);
+}
+
+.button:hover,
+.button button:hover {
+  background-color: var(--color);
+  transition: 0.1s;
+}
