@@ -126,4 +126,7 @@ ul {
   .links {
     display: none;
   }
+  .wrapper {
+    padding-bottom: 1rem;
+  }
 }

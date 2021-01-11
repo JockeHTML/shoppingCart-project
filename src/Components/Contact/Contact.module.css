@@ -79,9 +79,6 @@
 }
 
 @media (max-width: 768px) {
-  .wrapper {
-    margin-top: 5rem;
-  }
   .contact {
     padding: 2rem 1rem;
   }
