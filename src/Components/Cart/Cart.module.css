@@ -1,31 +1,170 @@
 .wrapper {
-  width: 80%;
-  margin: auto;
-  padding: 0rem 0rem 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 0;
+}
+
+.gridContainer {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  /*box-shadow: 2px 8px 20px #ddd !important;*/
 }
 
 .shoe {
+  justify-content: space-between;
   display: flex;
-  flex-direction: row;
   box-shadow: 2px 8px 20px #ddd !important;
   margin: 1rem 1rem !important;
-  min-width: 350px !important;
-  min-height: 290px !important;
+  width: 600px;
 }
 
-.imageDiv {
-  max-width: 40%;
+.shoeInfo {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 1rem 2rem;
 }
 
-.imageDiv img {
+.shoeInfo h1 {
+  margin: 0;
+}
+
+.image img {
   background-position: center;
   background-size: cover;
-  max-height: 300px;
+  cursor: pointer;
+  max-height: 340px;
   min-width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 1.2rem 1rem 1rem 1rem;
 }
 
-.emptyCartHeading {
+.emptyCart {
+  max-width: 80%;
   text-align: center;
+  padding: 1rem;
+  box-shadow: 2px 8px 20px #ddd !important;
+}
+
+.heading {
+  background-color: var(--beige);
+  padding: 5rem;
+}
+
+.image {
+  padding: 0;
+  margin: 0;
+}
+
+.heading h1 {
+  font-size: 3rem;
+  margin: 0 0 2.5rem 0;
+}
+
+.total {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+}
+
+.total h2 {
+  font-weight: bolder;
+  color: red;
+  margin: 1rem 0 0 2rem;
+}
+
+.button:hover {
+  background-color: var(--color);
+  transition: 0.1s;
+}
+
+.button {
+  outline: none;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--light);
+  padding: 14px;
+  width: 130px;
+}
+
+.homeButton {
+  margin: 10px 0 0 0;
+  background-color: var(--dark);
+}
+
+.removeButton i:hover {
+  color: var(--color);
+  transition: 0.1s;
+}
+
+.removeButton {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+  outline: none;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  margin: 20px 0 0 0;
+  background-color: transparent;
+  color: red;
+}
+
+.shoeInfoTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+@media (max-width: 668px) {
+  .shoe {
+    flex-direction: column;
+    padding-right: 2rem;
+  }
+  .shoe h1 {
+    padding: 0;
+    margin: 0;
+  }
+  .shoeInfo {
+    width: 100%;
+    padding: 1rem 1rem;
+  }
+  .wrapper {
+    padding: 0;
+  }
+  .heading h1 {
+    font-size: 2rem;
+  }
+  .image img {
+    padding: 1rem 1rem 0 1rem;
+  }
+  .shoeInfo h1,
+  p {
+    padding: 0 10px;
+  }
+  .removeButton {
+    margin: 0 20px 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin-top: 4rem;
+  }
+  .heading {
+    padding: 3rem 2rem;
+  }
+  .shoeInfo {
+    padding-top: 10px;
+  }
+  .emptyCart {
+    margin-top: 2rem;
+  }
 }

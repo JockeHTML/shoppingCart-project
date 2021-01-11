@@ -14,14 +14,13 @@ function About(props) {
                 <h3>Lorem ipsum dolor sit amet.</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita rerum sint rem quisquam. Possimus officiis eligendi quos pariatur earum vel.</p>
                 <br/>
-                <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni, nesciunt!</h3>
+                <h3>Lorem ipsum dolor sit amet. Magni, nesciunt!</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa voluptatibus neque, dolores nesciunt perspiciatis veniam explicabo quisquam omnis vel recusandae.</p>
                 </div>
                 <div className={styles.button}>
                     <Link to="/home"> BACK TO HOME </Link>
                 </div>
-            </div>
-            
+            </div> 
         </div>
     );
 }

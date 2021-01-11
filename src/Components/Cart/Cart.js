@@ -1,8 +1,13 @@
 import React from 'react';
 import styles from "./Cart.module.css"
-import  { Card, Grid} from "@material-ui/core";
+import  {Grid} from "@material-ui/core";
+import cx from "classnames";
 
-function Cart({shoeAdded, clearCart}) {
+import {
+    Link
+  } from "react-router-dom";
+
+    function Cart({shoeAdded, clearCart, deleteShoe}) {
 
     const shoes = shoeAdded;
 
@@ -12,33 +17,42 @@ function Cart({shoeAdded, clearCart}) {
 
     return (
         <div className={styles.wrapper}>
+        
         {shoeAdded.length > 0 ? 
-        <Grid container justify="center">
-            <div>
-                <button onClick={() => clearCart()}>CLEAR CART</button>
-            </div>
+        <Grid item lg={8} className={styles.gridContainer} container>
+           
         {shoes.map((shoe, i) => {
             return (
-            <div key={i} className={styles.shoeDiv}>
-                <Grid item xs={12} md={6} lg={3} component={Card} className={styles.shoe}>
-                    <div className={styles.imageDiv}>
+                <Grid key={i} id={shoe._id} item xs={12} md={10} lg={7} className={styles.shoe}>  
+                    <div className={styles.image}>
                         <img src={shoe.src} alt=""/>
                     </div>
                     <div className={styles.shoeInfo}>
-                        <h1>{shoe.title}</h1>  
-                    </div>  
-                </Grid>
-            </div>
+                        <span onClick={() => deleteShoe(shoe)} className={styles.removeButton}>
+                        <i className="fas fa-times"></i>
+                        </span>
+                        <h1>{shoe.title}</h1>
+                        <p>{shoe.description}</p>
+                        <p>{shoe.content}</p>
+                        <span className={styles.removeButton}><h3 style={{color:"red"}}>${shoe.price}</h3></span>
+                    </div>   
+                </Grid>           
             )})}
         </Grid> : 
-        <div className={styles.emptyCartHeading}>
-        <h1>Your cart is empty!</h1>  
-        </div>}
-        <div><p>Total:{total()}</p></div>
+            <div className={styles.emptyCart}>
+                <div className={styles.heading}>
+                    <h1>Your cart is empty!</h1>
+                    <Link className={cx(styles.button, styles.homeButton)} to="/">BACK TO HOME</Link>
+                </div> 
+            </div>}
+            {shoes.length > 0 ? <div className={styles.total}>
+                <button className={cx(styles.button, styles.homeButton)} onClick={() => clearCart()}>CLEAR CART</button>
+                <h2>Total: ${total()}</h2>
+            </div> : null} 
+            
         </div>
     );
 }
 
 export default Cart;
 
- 

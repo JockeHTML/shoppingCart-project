@@ -11,10 +11,10 @@ function Products({products, submitAdd}) {
     return (
         handleClick ? <ShoeInfo setHandleClick={setHandleClick} submitAdd={submitAdd} shoe={shoe} /> :
         <div className={styles.wrapper}>
-        <Grid container justify={"center"} spacing={4}>
+        <Grid container item lg={8} justify="center" spacing={4}>
             {products.map((product) => {
             return (
-            <Grid xs={12} md={4} lg={2} key={product._id} id={product._id} className={styles.grid} component={Card} item>
+            <Grid xs={6} md={4} lg={2} key={product._id} id={product._id} className={styles.grid} component={Card} item>
                 <div onClick={() => setShoe(product)} className={styles.imageDiv}>
                     <img onClick={() => setHandleClick(true)} src={product.src} alt="alt"/>
                 </div>

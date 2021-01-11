@@ -21,21 +21,23 @@ export default function ShoeInfo({shoe, setHandleClick, submitAdd}) {
                 </div>
                     <div className={styles.text}>
                     <div className={styles.title}>
-                        <h2>{shoe.title}</h2>
+                        <h1>{shoe.title}</h1>
                         <h3>${shoe.price}</h3>
                     </div>
                     <div className={styles.info}>
                         <p>{shoe.description}</p>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ab consequuntur reiciendis natus mollitia quos culpa tempora, porro praesentium fugit!</p>
+                        <p>{shoe.content}</p>
                     </div>
+                    
                     <div className={styles.colors}>
                         {shoe.colors.map((color, i) => {
                             return <button key={i} style={{background: color}} className={styles.colorsButton}></button>
-                        })}
+                        })}             
                     </div>
-                    <div className={cx(styles.button, styles.add)}>
+                    <div className={cx(styles.button, styles.addButton)}>
                         <button onClick={addToCart}> ADD TO CART </button>
                     </div>
+                    
                 </div>
             </div> 
             <div className={styles.button}>

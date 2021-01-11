@@ -14,11 +14,19 @@
   margin: 0;
 }
 
+.cardInfo {
+  padding: 0 10px;
+}
+
 .cardInfo h2,
 h3,
 p {
-  padding: 0;
+  padding: 0px;
   margin: 8px 0;
+}
+
+.cardInfo p {
+  padding: 0;
 }
 
 .cardInfo h3 {
@@ -26,9 +34,11 @@ p {
 }
 
 .wrapper {
-  width: 80%;
-  margin: auto;
-  padding: 0rem 0rem 2rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
 }
 
 .button {
@@ -58,4 +68,10 @@ p {
 .button button:hover {
   background-color: var(--color);
   transition: 0.1s;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    margin-top: 4rem;
+  }
 }

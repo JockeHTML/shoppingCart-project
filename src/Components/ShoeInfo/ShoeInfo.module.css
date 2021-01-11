@@ -20,7 +20,6 @@
 .image img {
   background-position: center;
   background-size: cover;
-  cursor: pointer;
   max-height: 340px;
   min-width: 100%;
   margin: 0;
@@ -32,21 +31,29 @@
   flex-direction: column;
 }
 
-.title h2,
-h3 p,
-.info h2,
-h3 p {
-  padding: 0;
-  margin: 8px 0;
-}
-
 .title h3 {
   color: red;
+  margin: 20px 0 0 0;
 }
 
-.title,
+.title h1 {
+  margin: 10px 0 0 0;
+}
+
+.title {
+  display: flex;
+  flex: row;
+  justify-content: space-between;
+  padding: 5px 1rem;
+}
+
 .info {
   padding: 0 1rem;
+}
+
+.test {
+  display: flex;
+  justify-content: space-between;
 }
 
 .colors {
@@ -66,8 +73,7 @@ h3 p {
 }
 
 .button {
-  padding: 2rem;
-  margin: auto;
+  padding: 4rem 2rem 1rem 2rem;
 }
 
 .button button:hover,
@@ -90,7 +96,36 @@ h3 p {
   padding: 14px;
 }
 
-.add {
+.addButton {
   margin: 5px 0 0 0;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
+}
+
+@media (max-width: 768px) {
+  .shoeInfo {
+    width: 80%;
+    flex-direction: column;
+    text-align: center;
+  }
+  .text {
+    padding-left: 0;
+  }
+  .colors {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+  }
+  .title {
+    padding: 5px 1rem;
+    justify-content: space-evenly;
+  }
+  .wrapper {
+    padding: 6rem 0 2rem 0;
+  }
+  .shoeInfo p {
+    padding: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

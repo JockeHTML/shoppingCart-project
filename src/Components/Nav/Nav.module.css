@@ -1,12 +1,18 @@
-.title h1 {
+.links h1 {
   color: var(--dark);
-  font-size: 2.2rem;
   font-weight: bolder;
+  font-size: 2.2rem;
+  padding: 0;
+  margin: 15px 2rem;
+}
+
+.links {
+  margin: auto;
+  display: flex;
 }
 
 .wrapper {
   display: flex;
-  justify-content: space-evenly;
 }
 
 .links ul {
@@ -48,4 +54,76 @@
   top: 20px;
   margin-left: 17px;
   color: var(--light);
+}
+
+.hamburger {
+  align-items: center;
+  background-color: transparent;
+  padding: 1.5rem 1.5rem;
+  display: none;
+  width: 0px;
+}
+
+.hamburgerActive {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color);
+  width: 225px;
+  height: 100vh;
+  left: 0;
+  z-index: 1;
+  transition: 500ms;
+}
+
+.hamburgerActive li,
+a,
+ul {
+  text-decoration: none;
+  list-style: none;
+  color: var(--light);
+  padding: 0;
+  border-radius: 5px;
+}
+
+.hamburgerActive ul {
+  padding: 10px;
+}
+
+.hamburgerActive li:hover {
+  background-color: var(--light);
+  color: var(--color);
+  transition: 100ms;
+}
+
+.hamburgerActive li:hover i {
+  color: var(--color);
+}
+
+.hamburgerActive li:hover a {
+  color: var(--color);
+}
+
+.hamburgerActive i {
+  background-color: transparent;
+  color: var(--light);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.hamburger i {
+  color: var(--color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    position: fixed;
+  }
+  .links {
+    display: none;
+  }
 }

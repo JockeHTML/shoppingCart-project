@@ -4,9 +4,9 @@
   justify-content: center;
   box-shadow: 2px 8px 20px #ddd !important;
   padding: 1rem;
-  margin: auto;
+  margin: 4rem auto 1rem;
   height: 100%;
-  width: 95%;
+  width: 90%;
 }
 
 .about {
@@ -51,4 +51,22 @@
   margin: 10px 0 0 0;
   background-color: var(--dark);
   padding: 14px;
+}
+
+@media (max-width: 768px) {
+  .aboutInfo {
+    text-align: center;
+    width: 100%;
+    margin: 0;
+  }
+  .about {
+    padding: 2rem 1rem;
+  }
+  .heading {
+    text-align: center;
+    border: 60%;
+  }
+  .wrapper {
+    margin-top: 5rem;
+  }
 }
