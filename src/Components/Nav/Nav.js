@@ -42,8 +42,6 @@ function Nav({shoesAdded}) {
                 </ul> : null }
             </div>
             
-                
-            
             <div className={styles.links}>
                 <h1>JOKÉ SHOES</h1>
                 <ul>

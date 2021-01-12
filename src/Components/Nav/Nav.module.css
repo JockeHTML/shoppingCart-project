@@ -126,7 +126,7 @@ ul {
   .links {
     display: none;
   }
-  .wrapper {
-    padding-bottom: 1rem;
+  nav {
+    margin-bottom: 1rem;
   }
 }
