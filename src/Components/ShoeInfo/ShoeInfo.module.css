@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem 0;
+  margin: 4rem 0;
 }
 
 .shoeInfo {
@@ -121,7 +121,7 @@
     justify-content: space-evenly;
   }
   .wrapper {
-    padding: 6rem 0 2rem 0;
+    margin-top: 5rem;
   }
   .shoeInfo p {
     padding: 0;
