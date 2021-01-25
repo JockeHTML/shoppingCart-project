@@ -29,8 +29,10 @@
   margin: 0 0 2.5rem 0;
 }
 
-.contactInfo p {
-  font-size: 1.2rem;
+.card p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: grey;
 }
 
 .card {

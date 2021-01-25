@@ -56,6 +56,21 @@
   color: var(--light);
 }
 
+.menuCartNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 50%;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  margin-top: 15px;
+  margin-left: 100px;
+  background-color: var(--dark);
+  color: var(--white);
+}
+
 .hamburger {
   align-items: center;
   background-color: transparent;
@@ -73,7 +88,7 @@
   height: 100vh;
   left: 0;
   z-index: 1;
-  transition: 500ms;
+  transition: 450ms;
 }
 
 .hamburgerActive li,

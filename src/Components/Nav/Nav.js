@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import styles from "./Nav.module.css"
+import {navData} from "../Context/Context";
 
 import {
     Link
@@ -19,25 +20,17 @@ function Nav({shoesAdded}) {
                 <span onClick={showSidebar}>{sidebar ? <i className="fas fa-times"></i> : <i className="fas fa-bars"></i>}</span>
                 {sidebar ? 
                 <ul>
+                    {navData.map((data, index) => {
+                        return (
+                        <li key={index}>
+                            <i className={data.icon}></i>
+                            <Link onClick={showSidebar} to={data.to}> {data.title} </Link>
+                        </li>
+                        )
+                    })}
                     <li>
-                        <i className="fas fa-home"></i>
-                        <Link onClick={showSidebar} to="/home"> HOME </Link>
-                    </li>
-                    <li>
-                        <i className="fas fa-question-circle"></i>
-                        <Link onClick={showSidebar} to="/contact"> CONTACT </Link>
-                    </li>
-                    <li>
-                        <i className="fab fa-product-hunt"></i>
-                        <Link onClick={showSidebar} to="/products"> PRODUCTS </Link>
-                    </li>
-                    <li>
-                        <i className="fas fa-users"></i>
-                        <Link onClick={showSidebar} to="/about"> ABOUT </Link>
-                    </li>
-                    <li>
-                        <i className="fas fa-shopping-cart"></i>
-                        <Link onClick={showSidebar} to="/cart"> CART </Link>
+                        {shoesAdded.length > 0 ? <span className={styles.menuCartNumber}>{shoesAdded.length}</span> : null}
+                        <Link onClick={showSidebar} to="/cart"><i className="fas fa-shopping-cart"></i>CART</Link>
                     </li>
                 </ul> : null }
             </div>
@@ -45,20 +38,17 @@ function Nav({shoesAdded}) {
             <div className={styles.links}>
                 <h1>JOKÉ SHOES</h1>
                 <ul>
+                    {navData.map((data, index) => {
+                        return (
+                        <li key={index}>
+                            <Link to={data.to}> {data.title} </Link>
+                        </li>
+                        )
+                    })}
                     <li>
-                        <Link to="/home"> HOME </Link>
-                    </li>
-                    <li>
-                        <Link to="/contact"> CONTACT </Link>
-                    </li>
-                    <li>
-                        <Link to="/products"> PRODUCTS </Link>
-                    </li>
-                    <li>
-                        <Link to="/about"> ABOUT </Link>
-                    </li>
-                    <li>
-                        {shoesAdded.length > 0 ? <span className={styles.cartNumber}>{shoesAdded.length}</span> : null}
+                        {shoesAdded.length > 0 ? 
+                        <span className={styles.cartNumber}>{shoesAdded.length}</span> 
+                        : null}
                         <Link to="/cart"><i className="fas fa-shopping-cart"></i></Link>
                     </li>
                 </ul>

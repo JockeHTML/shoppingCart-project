@@ -29,11 +29,11 @@ import {
                     </div>
                     <div className={styles.shoeInfo}>
                         <span onClick={() => deleteShoe(shoe)} className={styles.removeButton}>
-                        <i className="fas fa-times"></i>
+                            <i className="fas fa-times"></i>
                         </span>
-                        <h1>{shoe.title}</h1>
-                        <p>{shoe.description}</p>
-                        <p>{shoe.content}</p>
+                            <h1>{shoe.title}</h1>
+                            <p>{shoe.description}</p>
+                            <p>{shoe.content}</p>
                         <span className={styles.removeButton}><h3 style={{color:"red"}}>${shoe.price}</h3></span>
                     </div>   
                 </Grid>           

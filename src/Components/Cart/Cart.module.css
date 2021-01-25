@@ -10,7 +10,6 @@
   justify-content: center;
   align-items: center;
   display: flex;
-  /*box-shadow: 2px 8px 20px #ddd !important;*/
 }
 
 .shoe {
@@ -142,9 +141,7 @@
   .heading h1 {
     font-size: 2rem;
   }
-  .image img {
-    padding: 1rem 1rem 0 1rem;
-  }
+
   .shoeInfo h1,
   p {
     padding: 0 10px;
