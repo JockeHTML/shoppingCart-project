@@ -41,7 +41,7 @@ export default function ShoeInfo({shoe, setHandleClick, submitAdd}) {
                 </div>
             </div> 
             <div className={styles.button}>
-                <Link onClick={handleBack} to="/products"> PRODUCTS </Link>
+                <Link onClick={handleBack} to="/products"> BACK TO PRODUCTS </Link>
             </div>
     </div>
     );

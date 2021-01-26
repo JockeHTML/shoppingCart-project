@@ -34,7 +34,7 @@ import {
                             <h1>{shoe.title}</h1>
                             <p>{shoe.description}</p>
                             <p>{shoe.content}</p>
-                        <span className={styles.removeButton}><h3 style={{color:"red"}}>${shoe.price}</h3></span>
+                        <span className={styles.price}><h3 style={{color:"red"}}>${shoe.price}</h3></span>
                     </div>   
                 </Grid>           
             )})}
