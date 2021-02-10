@@ -8,12 +8,13 @@ import {
 
 function Nav({shoesAdded}) {
 
+    /* useState hook used for showing or not showing dropdown menu */
     const [ sidebar, setSideBar ] = useState(false);
-
     const showSidebar = () => {
         setSideBar(!sidebar);
     }
 
+    /* render different data depending on if sidebar is used or not */
     return (
         <nav className={styles.wrapper}>
             <div className={sidebar ? styles.hamburgerActive : styles.hamburger}>

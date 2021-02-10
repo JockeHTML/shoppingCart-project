@@ -5,10 +5,12 @@ import cx from "classnames";
  
 export default function ShoeInfo({shoe, setHandleClick, submitAdd}) {
 
+    /* back button */
     const handleBack = () => {
         setHandleClick(false);
     }
 
+    /* add product to cart */
     const addToCart = () => {
         submitAdd(shoe);
     }

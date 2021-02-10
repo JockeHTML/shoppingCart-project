@@ -15,16 +15,19 @@ import {
 
 function App() {
   
+  /* state used with useState hook to save and alert what shoe you added to cart */
   const [ shoeAdded, setShoeAdded ] = useState([]);
     const submitAdd = (shoe) => {
       setShoeAdded([...shoeAdded, shoe])
       alert("Your product have been added to the cart!")
     }
 
+    /* clear whole cart */
     const clearCart = () => {
       setShoeAdded([]);
     }
 
+    /* delete choosen shoe with id from shoe */
     const deleteShoe = (shoeToBeDeleted) => {
       const remainingShoes = shoeAdded.filter((shoesInCart, index) => {
         return shoesInCart._id !== shoeToBeDeleted._id 

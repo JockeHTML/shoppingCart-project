@@ -1,11 +1,8 @@
 import React from 'react';
 import styles from "./Contact.module.css"
 import {contactData} from "../Context/Context";
-
 import  { Card, Grid} from "@material-ui/core";
 import { Link } from "react-router-dom";
-
-
 
 function Contact(props) {
     return (

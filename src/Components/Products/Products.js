@@ -8,6 +8,7 @@ function Products({productsData, submitAdd}) {
     const [ shoe, setShoe ] = useState([]);
     const [ handleClick, setHandleClick ] = useState(false);
 
+    /* show shoes and render shoe info incase its clicked */
     return (
         handleClick ? <ShoeInfo setHandleClick={setHandleClick} submitAdd={submitAdd} shoe={shoe} /> :
         <div className={styles.wrapper}>

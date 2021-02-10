@@ -11,10 +11,12 @@ import {
 
     const shoes = shoeAdded;
 
+    /* total sum of shoes added to cart */
     const total = () => {
         return shoes.reduce((sum, {price}) => sum + price, 0);
     };
 
+    /* render different data depending on if there is something in the cart or not */
     return (
         <div className={styles.wrapper}>
         
